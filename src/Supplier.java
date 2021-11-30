@@ -51,6 +51,16 @@ public class Supplier extends User{
         this.incomingMessages = incomingMessages;
     }
 
+    public void supplierMenu(){
+        System.out.println("a) Press 1 to add a host place.");
+        System.out.println("b) Press 2 to edit a host place.");
+        System.out.println("c) Press 3 to delete a host place.");
+        System.out.println("d) Press 4 to search a host place.");
+        System.out.println("e) Press 5 to show the number of rentals.");
+        System.out.println("f) Press 6 to show the number of cancellations.");
+        System.out.println("g) Press 7 to show the number of incoming messages.");
+    }
+
     private HostPlace getHostPlaceByNumOfPeopleThatCanAccommodate(int numOfPeople){
         for(HostPlace hostPlace: hostPlaces){
             if(numOfPeople == hostPlace.getNumOfPeopleThatCanBeAccommodated()){

@@ -3,12 +3,9 @@ import java.util.Scanner;
 
 public class Main {
 
-    public void showMenu(){
-        System.out.println("a) Press 1 to add a host place.");
-        System.out.println("b) Press 2 to search a host place.");
-        System.out.println("c) Press 3 to delete a host place.");
-    }
+
     public static void main(String[] args){
+        Login.showMenu();
      /*  Supplier supplier = new Supplier();
 
         Scanner scanner = new Scanner(System.in);
