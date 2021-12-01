@@ -3,15 +3,15 @@ package Logic;
 import java.util.Scanner;
 
 public class HostPlace {
-    private  String title, location, address, space;
-    private double pricePerDay;
+    private  String title, location, address;
+    private double pricePerDay, space;
     private int firstDayOfRent, lastDayOfRent, daysToBeRent, numOfPeopleThatCanBeAccommodated;
     private boolean isRented;
 
     public HostPlace(){
 
     }
-    public HostPlace(String title, String location, String address, String space, int numOfPeopleThatCanBeAccommodated, double pricePerDay){
+    public HostPlace(String title, String location, String address, double space, int numOfPeopleThatCanBeAccommodated, double pricePerDay){
         this.title = title;
         this.location = location;
         this.address = address;
@@ -43,11 +43,11 @@ public class HostPlace {
         this.address = address;
     }
 
-    public String getSpace() {
+    public double getSpace() {
         return space;
     }
 
-    public void setSpace(String space) {
+    public void setSpace(double space) {
         this.space = space;
     }
 
@@ -103,8 +103,8 @@ public class HostPlace {
     public static HostPlace createHostPlace(){
 
         Scanner scanner = new Scanner(System.in);
-        String title, location, address, space;
-        double pricePerDay;
+        String title, location, address;
+        double pricePerDay, space;
         int numOfPeopleThatCanBeAccommodated;
 
         System.out.println("Insert title: ");
@@ -114,7 +114,7 @@ public class HostPlace {
         System.out.println("Insert address: ");
         address = scanner.nextLine();
         System.out.println("Insert space in m^2: ");
-        space = scanner.nextLine();
+        space = scanner.nextDouble();
         System.out.println("Insert numOfPeopleThatCanBeAccommodated: ");
         numOfPeopleThatCanBeAccommodated = scanner.nextInt();
         System.out.println("Insert price per day: ");
@@ -122,5 +122,7 @@ public class HostPlace {
 
         return new HostPlace(title, location, address, space, numOfPeopleThatCanBeAccommodated, pricePerDay);
     }
+
+
 
 }

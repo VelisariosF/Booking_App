@@ -10,7 +10,7 @@ public class HomePage {
                 }if(tempUser instanceof Supplier){
                     Supplier supplier = ((Supplier) tempUser);
                     SupplierHomePage supplierHomePage = new SupplierHomePage(supplier);
-                }else {
+                }else if((tempUser instanceof Administrator)) {
                     Administrator administrator = ((Administrator) tempUser);
                     AdministratorHomePage administratorHomePage = new AdministratorHomePage(administrator);
                 }
