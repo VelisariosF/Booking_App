@@ -1,4 +1,5 @@
 package GUI;
+import GUI.Customer.CustomerHomePage;
 import Logic.*;
 public class HomePage {
     public static void showUserHomePage(User user){
