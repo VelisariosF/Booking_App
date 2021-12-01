@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Helper {
     private static ArrayList<User> users = new ArrayList<User>();
@@ -23,4 +24,6 @@ public class Helper {
     public static void setUsers(ArrayList<User> users) {
         Helper.users = users;
     }
+
+
 }

@@ -1,9 +1,19 @@
+import java.util.Scanner;
+
 public class HostPlace {
     private  String title, location, address, space;
     private double pricePerDay;
     private int firstDayOfRent, lastDayOfRent, daysToBeRent, numOfPeopleThatCanBeAccommodated;
     private boolean isRented;
 
+    public HostPlace(String title, String location, String address, String space, int numOfPeopleThatCanBeAccommodated, double pricePerDay){
+        this.title = title;
+        this.location = location;
+        this.address = address;
+        this.space = space;
+        this.numOfPeopleThatCanBeAccommodated = numOfPeopleThatCanBeAccommodated;
+        this.pricePerDay = pricePerDay;
+    }
     public String getTitle() {
         return title;
     }
@@ -84,5 +94,28 @@ public class HostPlace {
         isRented = rented;
     }
 
+
+    public static HostPlace createHostPlace(){
+
+        Scanner scanner = new Scanner(System.in);
+        String title, location, address, space;
+        double pricePerDay;
+        int numOfPeopleThatCanBeAccommodated;
+
+        System.out.println("Insert title: ");
+        title = scanner.nextLine();
+        System.out.println("Insert location: ");
+        location = scanner.nextLine();
+        System.out.println("Insert address: ");
+        address = scanner.nextLine();
+        System.out.println("Insert space in m^2: ");
+        space = scanner.nextLine();
+        System.out.println("Insert numOfPeopleThatCanBeAccommodated: ");
+        numOfPeopleThatCanBeAccommodated = scanner.nextInt();
+        System.out.println("Insert price per day: ");
+        pricePerDay = scanner.nextDouble();
+
+        return new HostPlace(title, location, address, space, numOfPeopleThatCanBeAccommodated, pricePerDay);
+    }
 
 }

@@ -20,7 +20,16 @@ public class Login {
                 ((Customer)user).customerMenu();
 
             }if(user instanceof Supplier){
-                ((Supplier)user).supplierMenu();
+                Supplier supplier = ((Supplier) user);
+                supplier.supplierMenu();
+                int choice = scanner.nextInt();
+                switch (choice){
+                    case 1:
+                        HostPlace newHostPlace = HostPlace.createHostPlace();
+                        supplier.addHostPlace(newHostPlace);
+
+                }
+
 
             }else {
                 ((Administrator) user).administratorMenu();
