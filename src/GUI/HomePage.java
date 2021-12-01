@@ -1,19 +1,18 @@
 package GUI;
 import Logic.*;
 public class HomePage {
-    public static void showUserOptions(User user){
-            int userChoice = 0;
+    public static void showUserHomePage(User user){
             User tempUser = (Logic.Login.userExistsInTheSystem(user));
             if(tempUser != null){
                 if(tempUser instanceof Customer){
                     Customer customer = ((Customer)tempUser);
-                    userChoice = customer.customerChoice();
+                    CustomerHomePage customerHomePage = new CustomerHomePage(customer);
                 }if(tempUser instanceof Supplier){
                     Supplier supplier = ((Supplier) tempUser);
-                    userChoice = supplier.supplierChoice();
+                    SupplierHomePage supplierHomePage = new SupplierHomePage(supplier);
                 }else {
                     Administrator administrator = ((Administrator) tempUser);
-                    userChoice = administrator.administratorChoice();
+                    AdministratorHomePage administratorHomePage = new AdministratorHomePage(administrator);
                 }
 
             }

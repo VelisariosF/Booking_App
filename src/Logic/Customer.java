@@ -9,19 +9,13 @@ public class Customer extends User {
             super(usrm,pass,"customer" );
 
     }
-
-    public int customerChoice(){
-        Scanner scanner = new Scanner(System.in);
-        int choice = 0;
-        do{
-        System.out.println("a) Press 1 to search a host place by criteria.");
-        System.out.println("b) Press 2 to book a host place.");
-        System.out.println("c) Press 3 to cancel a book of a host place.");
-        System.out.println("d) Press 4 to show info about you.");
-        }while (choice != 1 && choice != 3 && choice != 3 && choice != 4);
-
-        //continue
-        return choice;
+    // 1, search by title
+    // 2, search by  location
+    // 3, search by  address
+    // 4, search by  space in m^2
+    // 5, search by  num of people to accommodate
+    // 6, search by  price per day
+    public HostPlace getHostPlaceByCriteria(int criteria){
+        return null;
     }
-
 }

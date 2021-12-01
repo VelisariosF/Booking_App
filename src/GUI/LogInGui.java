@@ -23,7 +23,7 @@ public class LogInGui {
 
             User user = Logic.Login.checkUserCredentials(new User(username, password, role));
             if(user != null){
-                GUI.HomePage.showUserOptions(user);
+                HomePage.showUserHomePage(user);
                 flag = true;
             }else{
                 System.out.println("User does not exist.");
