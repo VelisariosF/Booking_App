@@ -1,3 +1,5 @@
+package Logic;
+
 import java.util.Scanner;
 
 public class HostPlace {
@@ -6,6 +8,9 @@ public class HostPlace {
     private int firstDayOfRent, lastDayOfRent, daysToBeRent, numOfPeopleThatCanBeAccommodated;
     private boolean isRented;
 
+    public HostPlace(){
+
+    }
     public HostPlace(String title, String location, String address, String space, int numOfPeopleThatCanBeAccommodated, double pricePerDay){
         this.title = title;
         this.location = location;

@@ -1,5 +1,7 @@
+package Logic;
+
 import java.util.ArrayList;
-import java.util.Locale;
+import java.util.Scanner;
 
 public class Supplier extends User{
 
@@ -8,7 +10,7 @@ public class Supplier extends User{
    private int rentals, cancellations, incomingMessages;
 
     public Supplier(String usrm, String pass){
-        super(usrm,pass,"Supplier" );
+        super(usrm,pass,"supplier" );
 
     }
     public InfoCard getSupplierInfoCard() {
@@ -51,7 +53,10 @@ public class Supplier extends User{
         this.incomingMessages = incomingMessages;
     }
 
-    public void supplierMenu(){
+    public int supplierChoice(){
+        Scanner scanner = new Scanner(System.in);
+        int choice = 0;
+        do{
         System.out.println("a) Press 1 to add a host place.");
         System.out.println("b) Press 2 to edit a host place.");
         System.out.println("c) Press 3 to delete a host place.");
@@ -59,6 +64,10 @@ public class Supplier extends User{
         System.out.println("e) Press 5 to show the number of rentals.");
         System.out.println("f) Press 6 to show the number of cancellations.");
         System.out.println("g) Press 7 to show the number of incoming messages.");
+    }while (choice != 1 && choice != 3 && choice != 3 && choice != 4 && choice != 5 && choice !=6  && choice != 7);
+
+    //continue admin
+        return choice;
     }
 
     private HostPlace getHostPlaceByNumOfPeopleThatCanAccommodate(int numOfPeople){

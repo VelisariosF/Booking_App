@@ -1,4 +1,9 @@
+package Logic;
+
 public class Apartment extends HostPlace{
+    public Apartment(){
+        super();
+    }
     boolean hasWifi, haskitchen;
 
     public boolean isHasWifi() {

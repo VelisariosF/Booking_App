@@ -1,3 +1,5 @@
+package Logic;
+
 import java.util.Scanner;
 
 public class Registration {
@@ -5,7 +7,7 @@ public class Registration {
         String username, password, confirmation_password, role;
         do{
             Scanner scanner = new Scanner(System.in);
-            System.out.println("----- Registration -----");
+            System.out.println("----- Logic.Registration -----");
             System.out.println("Insert username: ");
             username = scanner.nextLine();
             System.out.println("Insert password: ");
